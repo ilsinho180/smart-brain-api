@@ -10,8 +10,11 @@ const image=require('./controllers/image.js')
 const db=knex({
 	client: 'pg',
     connection: {
-    connectionString : process.env.DATABASE_URL,
-    ssl:false,
+    host : '127.0.0.1',
+    port : 5432,
+    user : 'postgres',
+    password : 'Steauabucuresti9',
+    database : 'smart_brain'
 }
 })
 
@@ -38,7 +41,7 @@ app.put('/image', (req,res)=>{image.handleImage(req,res,db)})
 
 
 
-app.listen(process.env.PORT || 3000, ()=>{
-	console.log(`App is running on port ${process.env.PORT}!`);
+app.listen(3000, ()=>{
+	console.log('App is running on port 3000!');
 })
 
