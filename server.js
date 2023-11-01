@@ -10,11 +10,11 @@ const image=require('./controllers/image.js')
 const db=knex({
     client: 'pg',
     connection: {
-    host : process.env.HOSTNAME,
+    host : 'dpg-cl198hi35nfs73fac3l0-a',
     port : 5432,
-    user : process.env.DATABASE_USER,
-    password : process.env.DATABASE_PW,
-    database :  process.env.DATABASE
+    user : 'mydb_3c7a_user',
+    password : 'eEsrjTk0ygtLuC1uQNbq8aPpeNrQIJvQ',
+    database : 'mydb_3c7a'
 }
 })
 
