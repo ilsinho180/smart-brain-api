@@ -10,7 +10,7 @@ const image=require('./controllers/image.js')
 const db=knex({
 	client: 'pg',
     connection: {
-    host : '127.0.0.1',
+    host : 'postgresql-silhouetted-38706',
     port : 5432,
     user : 'postgres',
     password : 'Steauabucuresti9',
