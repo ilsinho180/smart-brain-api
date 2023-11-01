@@ -8,13 +8,13 @@ const profile=require('./controllers/profile.js')
 const image=require('./controllers/image.js')
 
 const db=knex({
-	client: 'pg',
+    client: 'pg',
     connection: {
-    host : '127.0.0.1',
+    host : process.env.HOSTNAME,
     port : 5432,
-    user : 'postgres',
-    password : 'Steauabucuresti9',
-    database : 'smart_brain'
+    user : process.env.DATABASE_USER,
+    password : process.env.DATABASE_PW,
+    database :  process.env.DATABASE
 }
 })
 
